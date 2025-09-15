@@ -6,7 +6,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: laravel-app
+    container_name: filament-plugin-test
     restart: unless-stopped
     working_dir: /var/www/html
     volumes:
@@ -18,7 +18,7 @@ services:
   # Service untuk database MySQL
   db:
     image: mysql:8.0
-    container_name: mysql-db
+    container_name: mysql-db-filament
     restart: unless-stopped
     environment:
       MYSQL_DATABASE: 'mydatabase'
